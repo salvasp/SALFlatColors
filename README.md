@@ -1,6 +1,6 @@
 # SALFlatColors
 
-## Flat Colors as you need
+## Flat Colors as you need in just one enum
 #### Class
 #### Literal
 #### Colorset
