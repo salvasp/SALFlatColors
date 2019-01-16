@@ -9,7 +9,8 @@
 import UIKit
 
 public enum FlatColors: Int, CaseIterable {
-    case turquoise   = 0x1abc9c,
+    case
+    turquoise        = 0x1abc9c,
     emerald          = 0x2ecc71,
     peterRiver       = 0x3498db,
     amethyst         = 0x9b59b6,
@@ -137,5 +138,15 @@ public enum FlatColors: Int, CaseIterable {
             green: CGFloat((self.rawValue & 0x00FF00) >> 8) / 255.0,
             blue: CGFloat(self.rawValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1))
+    }
+    
+    public var cgColor: CGColor {
+        return self.uiColor.cgColor
+    }
+}
+
+extension UIColor {
+    class func randomFlat() -> UIColor {
+        return FlatColors.allCases.randomElement()!.uiColor
     }
 }
