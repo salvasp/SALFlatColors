@@ -145,8 +145,8 @@ public enum FlatColors: Int, CaseIterable {
     }
 }
 
-extension UIColor {
-    class func randomFlat() -> UIColor {
+extension FlatColors {
+    static func random() -> UIColor {
         return FlatColors.allCases.randomElement()!.uiColor
     }
 }
